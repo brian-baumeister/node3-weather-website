@@ -11,7 +11,8 @@ const forecast = (latitude, longitude, callback) => {
 			callback(
 				undefined,
 				`Current forecast is ${body.currently.icon}. It is currently ${body.currently
-					.temperature} out. There is a ${body.currently.precipProbability}% chance of rain!`
+					.temperature} out. The hight today is ${body.daily.data[0].temperatureHigh} with a low of ${body
+					.daily.data[0].temperatureLow}  There is a ${body.currently.precipProbability}% chance of rain!`
 			);
 		}
 	});
